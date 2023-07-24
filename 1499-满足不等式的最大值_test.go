@@ -54,7 +54,7 @@ func findMaxValueOfEquation(points [][]int, k int) int {
 			heap.Pop(pq)
 		}
 		if pq.Len() > 0 {
-			res = max(res, x+y-pq.Top()[0])
+			res = Max(res, x+y-pq.Top()[0])
 		}
 		heap.Push(pq, []int{x - y, x})
 	}
@@ -84,7 +84,7 @@ func findMaxValueOfEquation2(points [][]int, k int) int {
 	return result
 }
 
-func max(a, b int) int {
+func Max(a, b int) int {
 	if a > b {
 		return a
 	}
